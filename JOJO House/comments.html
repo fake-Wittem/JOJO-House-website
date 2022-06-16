@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>评论页面</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+        body {
+            padding: 60px 15px;
+        }
+
+        .col-md-7>p {
+            text-indent: 2em;
+            font-size: large;
+        }
+
+        img {
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px lightslategray;
+            width: 100%;
+            height: 100%;
+        }
+
+        .patrick-buttom {
+            color: rgb(156, 178, 200);
+        }
+
+        .btn {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--导航-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">JOJO House</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">角色介绍<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="yhj_01.html">幻影之血</a></li>
+                            <li><a href="yhj_02.html">战斗潮流</a></li>
+                            <li><a href="yhj_03.html">星尘斗士</a></li>
+                            <li><a href="yhj_04.html">不灭钻石</a></li>
+                            <li><a href="yhj_05.html">黄金之风</a></li>
+                            <li><a href="yhj_06.html">石之海</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">番剧链接<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://www.bilibili.com/bangumi/play/ep292950">幻影之血</a></li>
+                            <li><a href="https://www.bilibili.com/bangumi/play/ss4334">战斗潮流</a></li>
+                            <li><a href="https://www.bilibili.com/bangumi/play/ep293053">星尘斗士</a></li>
+                            <li><a href="https://www.bilibili.com/bangumi/play/ep251326">不灭钻石</a></li>
+                            <li><a href="https://www.bilibili.com/bangumi/play/ep250611">黄金之风</a></li>
+                            <li><a href="https://www.bilibili.com/bangumi/play/ss39431">石之海<small
+                                        style="color: lightcoral;">new</small></a></li>
+                        </ul>
+                    </li>
+                    <li class="active"><a href="comments.html">评论<span class="sr-only">(current)</span></a></li>
+                    <li><a href="javascript:;" data-toggle="modal" data-target="#myModal">关于</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="login.html">登录</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 评论面板 -->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">评论面板</h3>
+        </div>
+        <form class="panel-body" id="formAddCmt">
+            <div>评论人</div>
+            <input type="text" class="form-control" name="username" />
+            <div>评论内容：</div>
+            <textarea class="form-control" rows="10" name="content"></textarea>
+            <button type="submit" class="btn btn-primary">发表评论</button>
+        </form>
+    </div>
+
+    <!-- 评论列表 -->
+    <ul class="list-group" id="cmt-list">
+        <li class="list-group-item">
+            <span class="badge" style="background-color: #F0AD4E;">评论时间</span>
+            <span class="badge" style="background-color: #5BC0DE;">评论人</span>
+            Item 1
+        </li>
+    </ul>
+
+
+    <!--底部分界线-->
+    <div class="container">
+        <hr>
+    </div>
+
+    <!--底部-->
+    <div class="container patrick-buttom">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>&copy;叶豪杰&nbsp;&nbsp;广东省广州市白云区广东白云学院</p>
+            </div>
+        </div>
+    </div>
+
+    <!--模态框-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">关于网站</h4>
+                </div>
+                <div class="modal-body">
+                    <p>该网站是面向想要了解《JOJO的奇妙冒险》及其粉丝的个人粉丝向网站，欢迎讨论学习</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    //获取评论列表
+    function getCommentLisrt() {
+        $.ajax({
+            method: 'GET',
+            url: 'http://www.liulongbin.top:3006/api/cmtlist',
+            data: {},
+            success: function (res) {
+                if (res.status !== 200) {
+                    return alert('获取评论列表失败！')
+                }
+                var rows = []
+                $.each(res.data, function (i, item) {
+                    var str = '<li class="list-group-item"><span class="badge" style="background-color: #F0AD4E;">评论时间：' + item.time + '</span><span class="badge" style="background-color: #5BC0DE;">评论人：' + item.username + '</span>' + item.content + '</li>'
+                    rows.push(str)
+                })
+                $('#cmt-list').empty().append(rows.join(''))
+            }
+        })
+    }
+    getCommentLisrt();
+
+    //提交评论表单
+    $(function () {
+        $('#formAddCmt').submit(function (e) {
+            e.preventDefault()
+            var data = $(this).serialize()
+            $.post('http://www.liulongbin.top:3006/api/addcmt', data, function (res) {
+                if (res.status !== 201) {
+                    return alert('发表评论失败')
+                }
+                getCommentLisrt()
+                //jQuery对象转换为原生dom对象，调用reset方法清空form内容
+                $('#formAddCmt')[0].reset()
+            })
+        })
+    })
+</script>
+
+</html>

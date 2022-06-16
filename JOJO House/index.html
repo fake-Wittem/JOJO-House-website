@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+  <title>首页</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <style type="text/css">
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      padding-top: 50px;
+    }
+
+    .thumbnail {
+      border-color: #FFFFFF;
+    }
+
+    .thumbnail>img {
+      border-radius: 10px;
+      box-shadow: 5px 5px 5px lightslategray;
+    }
+
+    .patrick-second {
+      margin-top: 50px;
+    }
+
+    .patrick-hr {
+      margin: 50px auto;
+    }
+
+    .tab-content {
+      font-size: large;
+    }
+
+    .patrick-col7>p {
+      text-indent: 2em;
+    }
+
+    .patrick-buttom {
+      color: rgb(156, 178, 200);
+    }
+  </style>
+</head>
+
+<body>
+  <!--导航-->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">JOJO House</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">剧情介绍<span class="caret"></span></a>
+            <ul class="dropdown-menu" id="patrick-nav">
+              <li><a href="#PhantomBlood">幻影之血</a></li>
+              <li><a href="#BloodyStream">战斗潮流</a></li>
+              <li><a href="#StardustCrusaders">星尘斗士</a></li>
+              <li><a href="#DiamondIsUnbreakable">不灭钻石</a></li>
+              <li><a href="#GoldenWind">黄金之风</a></li>
+              <li><a href="#StoneOcean">石之海</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">角色介绍<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="yhj_01.html">幻影之血</a></li>
+              <li><a href="yhj_02.html">战斗潮流</a></li>
+              <li><a href="yhj_03.html">星尘斗士</a></li>
+              <li><a href="yhj_04.html">不灭钻石</a></li>
+              <li><a href="yhj_05.html">黄金之风</a></li>
+              <li><a href="yhj_06.html">石之海</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">番剧链接<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://www.bilibili.com/bangumi/play/ep292950">幻影之血</a></li>
+              <li><a href="https://www.bilibili.com/bangumi/play/ss4334">战斗潮流</a></li>
+              <li><a href="https://www.bilibili.com/bangumi/play/ep293053">星尘斗士</a></li>
+              <li><a href="https://www.bilibili.com/bangumi/play/ep251326">不灭钻石</a></li>
+              <li><a href="https://www.bilibili.com/bangumi/play/ep250611">黄金之风</a></li>
+              <li><a href="https://www.bilibili.com/bangumi/play/ss39431">石之海<small
+                    style="color: lightcoral;">new</small></a></li>
+            </ul>
+          </li>
+          <li><a href="comments.html">评论</a></li>
+          <li><a href="javascript:;" data-toggle="modal" data-target="#myModal">关于</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="login.html">登录</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--轮播-->
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="img/0.jpeg">
+      </div>
+      <div class="item">
+        <img src="img/1.jpeg">
+      </div>
+      <div class="item">
+        <img src="img/2.jpeg">
+      </div>
+      <div class="item">
+        <img src="img/3.jpeg">
+      </div>
+      <div class="item">
+        <img src="img/4.jpeg">
+      </div>
+    </div>
+
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <!--缩略图-->
+  <div class="container patrick-second">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 text-center">
+        <div class="thumbnail">
+          <img src="img/jojo1.jpeg">
+          <div class="caption">
+            <h3>幻影之血</h3>
+            <p>《JOJO的奇妙冒险：幻影之血》是日本著名漫画家荒木飞吕彦所著的热血少年漫画，是《JOJO的奇妙冒险》系列动画的第一部。</p>
+            <p><a href="https://www.bilibili.com/bangumi/play/ep292950" class="btn btn-primary" role="button">观看番剧</a>
+              <a href="yhj_01.html" class="btn btn-default" role="button">角色介绍</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 text-center">
+        <div class="thumbnail">
+          <img src="img/jojo2.jpeg">
+          <div class="caption">
+            <h3>战斗潮流</h3>
+            <p>《JOJO的奇妙冒险：战斗潮流》是日本著名漫画家荒木飞吕彦所著的热血少年漫画，是《JOJO的奇妙冒险》系列动画的第二部。</p>
+            <p><a href="https://www.bilibili.com/bangumi/play/ss4334" class="btn btn-primary" role="button">观看番剧</a> <a
+                href="yhj_02.html" class="btn btn-default" role="button">角色介绍</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 text-center">
+        <div class="thumbnail">
+          <img src="img/jojo3.jpeg">
+          <div class="caption">
+            <h3>星尘斗士</h3>
+            <p>《JOJO的奇妙冒险：星尘斗士》是日本著名漫画家荒木飞吕彦所著的热血少年漫画，是《JOJO的奇妙冒险》系列动画的第三部。</p>
+            <p><a href="https://www.bilibili.com/bangumi/play/ep293053" class="btn btn-primary" role="button">观看番剧</a>
+              <a href="yhj_03.html" class="btn btn-default" role="button">角色介绍</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 text-center">
+        <div class="thumbnail">
+          <img src="img/jojo4.jpeg">
+          <div class="caption">
+            <h3>不灭钻石</h3>
+            <p>《JOJO的奇妙冒险：不灭钻石》是日本著名漫画家荒木飞吕彦所著的热血少年漫画，是《JOJO的奇妙冒险》系列动画的第四部。</p>
+            <p><a href="https://www.bilibili.com/bangumi/play/ep251326" class="btn btn-primary" role="button">观看番剧</a>
+              <a href="yhj_04.html" class="btn btn-default" role="button">角色介绍</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 text-center">
+        <div class="thumbnail">
+          <img src="img/jojo5.jpeg">
+          <div class="caption">
+            <h3>黄金之风</h3>
+            <p>《JOJO的奇妙冒险：黄金之风》是日本著名漫画家荒木飞吕彦所著的热血少年漫画，是《JOJO的奇妙冒险》系列动画的第五部。</p>
+            <p><a href="https://www.bilibili.com/bangumi/play/ep250611" class="btn btn-primary" role="button">观看番剧</a>
+              <a href="yhj_05.html" class="btn btn-default" role="button">角色介绍</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 text-center">
+        <div class="thumbnail">
+          <img src="img/jojo6.jpeg">
+          <div class="caption">
+            <h3>石之海<small style="color: lightcoral;">new</small></h3>
+            <p>《JOJO的奇妙冒险：石之海》是日本著名漫画家荒木飞吕彦所著的热血少年漫画，是《JOJO的奇妙冒险》系列动画的第六部。</p>
+            <p><a href="https://www.bilibili.com/bangumi/play/ss39431" class="btn btn-primary" role="button">观看番剧</a> <a
+                href="yhj_06.html" class="btn btn-default" role="button">角色介绍</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--分界线-->
+  <div class="container patrick-hr">
+    <hr>
+  </div>
+
+  <!--标签页-->
+  <div class="container" id="patrick-tab">
+    <ul class="nav nav-tabs" role="tablist" id="patrick-list">
+      <li role="presentation" class="active"><a href="#PhantomBlood" aria-controls="PhantomBlood" role="tab"
+          data-toggle="tab">幻影之血</a></li>
+      <li role="presentation"><a href="#BloodyStream" aria-controls="BloodyStream" role="tab" data-toggle="tab">战斗潮流</a>
+      </li>
+      <li role="presentation"><a href="#StardustCrusaders" aria-controls="StardustCrusaders" role="tab"
+          data-toggle="tab">星尘斗士</a></li>
+      <li role="presentation"><a href="#DiamondIsUnbreakable" aria-controls="DiamondIsUnbreakable" role="tab"
+          data-toggle="tab">不灭钻石</a></li>
+      <li role="presentation"><a href="#GoldenWind" aria-controls="settings" role="GoldenWind"
+          data-toggle="tab">黄金之风</a></li>
+      <li role="presentation"><a href="#StoneOcean" aria-controls="settings" role="StoneOcean" data-toggle="tab">石之海</a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="PhantomBlood">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-7 patrick-col7">
+              <h2>《JOJO的奇妙冒险：幻影之血》</h2>
+              <br>
+              <p>初代JOJO（乔纳森·乔斯达）的父亲收留了其“救命恩人”的儿子，一个名叫迪奥·布兰度的孤儿，抚养他成人，
+                但迪奥图谋JOJO家族的财产，谋杀了乔纳森的父亲。事败之后，为了报复，迪奥不惜戴上神秘的石鬼面，成为了不老不死的吸血鬼，得到了不可思议的强大力量。而乔纳森后来也跟威廉·A·齐贝林学习了能杀死吸血鬼的波纹气功，而最后乔纳森在与迪奥同归于尽的时候也留下了后代。
+              </p>
+            </div>
+            <div class="col-md-5">
+              <img src="img/jojo1.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="BloodyStream">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-5">
+              <img src="img/jojo2.jpg">
+            </div>
+            <div class="col-md-7 patrick-col7">
+              <h2>《JOJO的奇妙冒险：战斗潮流》</h2>
+              <br>
+              <p>
+                在二十世纪三、四十年代的纽约，乔纳森·乔斯达的孙子乔瑟夫·乔斯达，又遇上了新的敌人：超级史前生物柱之男。柱之男是创造吸血鬼的元凶，他们创造石鬼面的目的是为了获得更加强大的力量，但是因为缺少一样关键的物品，戴上石鬼面只能变成被他们当成食物的吸血鬼。
+              </p>
+              <p>
+                为了自己的先祖（乔瑟夫·乔斯达的祖父乔纳森·乔斯达，以及父亲乔治·乔斯达，西撒·安德里欧·齐贝林的祖父威廉·A·齐贝林，父亲马利奥·齐贝林），两人寻找莉莎莉莎进行波纹气功的特训，这是唯一能对抗柱之男的武器。为了保护自己所重视的一切，乔瑟夫和西撒与柱之男们展开了战斗。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="StardustCrusaders">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-7 patrick-col7">
+              <h2>《JOJO的奇妙冒险：星尘斗士》</h2>
+              <br>
+              <p>
+                时为1987年，乔瑟夫·乔斯达与“柱之男”们之间的死战后过了50年……乔瑟夫为了帮助“被恶灵附身了”的外孙子·空条承太郎而来到了日本。原来那并不是恶灵而是幽波纹（替身）。替身突然出现的原因在于，从跨越100年的长眠中苏醒过来的吸血鬼·DIO与乔斯达家之间的令人忌讳的因缘。为了拯救受到DIO的诅咒而倒下的承太郎的母亲·荷莉，他们决定要打倒邪恶的化身·DIO，和伙伴们一起踏上了旅程。
+              </p>
+              <p>
+                在乔斯达家的宿敌·迪奥（DIO）复活的影响下，一位年轻人——空条承太郎，得到了名为“幽波纹（替身）”的能力。为了拯救因迪奥的诅咒而倒下的母亲荷莉，空条承太郎与外祖父·乔瑟夫以及伙伴们，一起为了打倒迪奥而展开旅程。在漫长的旅途当中，承太郎等人一次又一次地击退刺客，最后终于抵达迪奥所在的埃及。然而，为了阻止他们前进，各种怪异可怕的新一波敌影不断逼近。
+              </p>
+            </div>
+            <div class="col-md-5">
+              <img src="img/jojo3.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="DiamondIsUnbreakable">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-5">
+              <img src="img/jojo4.jpg">
+            </div>
+            <div class="col-md-7 patrick-col7">
+              <h2>《JOJO的奇妙冒险：不灭钻石》</h2>
+              <br>
+              <p>
+                时为1987年，乔瑟夫·乔斯达与“柱之男”们之间的死战后过了50年……乔瑟夫为了帮助“被恶灵附身了”的外孙子·空条承太郎而来到了日本。原来那并不是恶灵而是幽波纹（替身）。替身突然出现的原因在于，从跨越100年的长眠中苏醒过来的吸血鬼·DIO与乔斯达家之间的令人忌讳的因缘。为了拯救受到DIO的诅咒而倒下的承太郎的母亲·荷莉，他们决定要打倒邪恶的化身·DIO，和伙伴们一起踏上了旅程。
+              </p>
+              <p>
+                在乔斯达家的宿敌·迪奥（DIO）复活的影响下，一位年轻人——空条承太郎，得到了名为“幽波纹（替身）”的能力。为了拯救因迪奥的诅咒而倒下的母亲荷莉，空条承太郎与外祖父·乔瑟夫以及伙伴们，一起为了打倒迪奥而展开旅程。在漫长的旅途当中，承太郎等人一次又一次地击退刺客，最后终于抵达迪奥所在的埃及。然而，为了阻止他们前进，各种怪异可怕的新一波敌影不断逼近。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="GoldenWind">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-7 patrick-col7">
+              <h2>《JOJO的奇妙冒险：黄金之风》</h2>
+              <br>
+              <p>住在意大利那不勒斯的青年乔鲁诺·乔巴拿，是继承了乔斯达家宿敌·DIO之血脉的儿子。</p>
+              <p>
+                幼年时遭受迫害而自暴自弃的他，由于拯救了一名黑帮男子，而学到了“相信他人”。不忘恩义、带着敬意对待自己的黑帮，让他的心变得率直。就这样，乔鲁诺开始对“黑帮明星”怀有憧憬。15岁的乔鲁诺，与统领意大利黑社会的黑帮组织“热情”一同引发事端，并成为被盯上的目标……
+              </p>
+            </div>
+            <div class="col-md-5">
+              <img src="img/jojo5.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="StoneOcean">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-5">
+              <img src="img/jojo6.jpg">
+            </div>
+            <div class="col-md-7 patrick-col7">
+              <h2>《JOJO的奇妙冒险：石之海》</h2>
+              <br>
+              <p>
+                公元2011年，美国佛罗里达州。空条徐伦在与恋人开车兜风时遭遇交通事故，之后因被人陷害而获刑长达15年之久。她被关押在州立绿海豚街重警备监狱——别名“水族馆”。被逼到绝望边缘的徐伦，却通过父亲托付给她的吊坠而觉醒了体内不可思议的力量。
+              </p>
+              <p>
+                “这个世界上存在着比死亡更可怕的事情，而且这件事情将必定在这家监狱发生。”这是出现在徐伦面前的神秘少年所留下的讯息。难以理解的事件接连发生。前来探监的父亲空条承太郎口中讲述的恐怖事实，以及一个叫做“DIO”的名字……
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--底部分界线-->
+  <div class="container">
+    <hr>
+  </div>
+
+  <!--底部-->
+  <div class="container patrick-buttom">
+    <div class="row">
+      <div class="col-12 text-center">
+        <p>&copy;叶豪杰&nbsp;&nbsp;广东省广州市白云区广东白云学院</p>
+      </div>
+    </div>
+  </div>
+
+  <!--模态框-->
+  <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">关于网站</h4>
+        </div>
+        <div class="modal-body">
+          <p>该网站是面向想要了解《JOJO的奇妙冒险》及其粉丝的个人粉丝向网站，欢迎讨论学习</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+<!--实现导航跳转对应标签页-->
+<script type="text/javascript">
+  $(function () {
+    $('#patrick-nav >li >a').click(function (e) {
+      var href = $(this).attr("href");
+      $("#patrick-list >li >a[href='" + (href) + "']").tab('show');
+      $(document).scrollTop($("#patrick-tab").offset().top);
+      e.preventDefault();
+    })
+  })
+</script>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <title>登录页面</title>
+  <style type="text/css">
+    body {
+      padding: 60px 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <!--导航-->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">JOJO House</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">首页</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">角色介绍<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="yhj_01.html">幻影之血</a></li>
+              <li><a href="yhj_02.html">战斗潮流</a></li>
+              <li><a href="yhj_03.html">星尘斗士</a></li>
+              <li><a href="yhj_04.html">不灭钻石</a></li>
+              <li><a href="yhj_05.html">黄金之风</a></li>
+              <li><a href="yhj_06.html">石之海</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">番剧链接<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://www.bilibili.com/bangumi/play/ep292950">幻影之血</a></li>
+              <li><a href="https://www.bilibili.com/bangumi/play/ss4334">战斗潮流</a></li>
+              <li><a href="https://www.bilibili.com/bangumi/play/ep293053">星尘斗士</a></li>
+              <li><a href="https://www.bilibili.com/bangumi/play/ep251326">不灭钻石</a></li>
+              <li><a href="https://www.bilibili.com/bangumi/play/ep250611">黄金之风</a></li>
+              <li><a href="https://www.bilibili.com/bangumi/play/ss39431">石之海<small
+                    style="color: lightcoral;">new</small></a></li>
+            </ul>
+          </li>
+          <li><a href="comments.html">评论</a></li>
+          <li><a href="javascript:;" data-toggle="modal" data-target="#myModal">关于</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="login.html">登录<span class="sr-only">(current)</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--头部巨幕-->
+  <div class="jumbotron text-center">
+    <h1>JOJO House</h1>
+    <p>欢迎登录注册</p>
+  </div>
+
+  <!-- 登录注册区域 -->
+  <div>
+    <!-- 登录区域 -->
+    <div class="login-box">
+      <form class="form-horizontal" id="form_login">
+        <div class="form-group">
+          <label for="username" class="col-sm-2 control-label">用户名</label>
+          <div class="col-sm-10">
+            <input type="text" name="username" class="form-control" placeholder="请输入用户名">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password" class="col-sm-2 control-label">密码</label>
+          <div class="col-sm-10">
+            <input type="password" name="password" class="form-control" placeholder="请输入密码">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">登录</button>
+            <a id="link_reg">去注册</a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- 注册区域 -->
+    <div class="reg-box">
+      <form class="form-horizontal" id="form_reg">
+        <div class="form-group">
+          <label for="username" class="col-sm-2 control-label">用户名</label>
+          <div class="col-sm-10">
+            <input type="text" name="username" class="form-control" placeholder="请输入用户名">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password" class="col-sm-2 control-label">密码</label>
+          <div class="col-sm-10">
+            <input type="password" name="password" class="form-control" placeholder="请输入密码">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">注册</button>
+            <a id="link_login">去登录</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+<script>
+  $(function () {
+    $('.reg-box').hide()
+    // 点击“去注册”的链接
+    $('#link_reg').on('click', function () {
+      $('.login-box').hide()
+      $('.reg-box').show()
+    })
+
+    // 点击“去登录”的链接
+    $('#link_login').on('click', function () {
+      $('.login-box').show()
+      $('.reg-box').hide()
+    })
+
+    // 监听注册表单的提交事件
+    $('#form_reg').on('submit', function (e) {
+      // 1. 阻止默认的提交行为
+      e.preventDefault()
+      // 2. 发起Ajax的POST请求
+      var data = {
+        username: $('#form_reg [name=username]').val(),
+        password: $('#form_reg [name=password]').val()
+      }
+      $.post('http://127.0.0.1:3007/api/reguser', data, function (res) {
+        if (res.status !== 0) {
+          return alert(res.message)
+        }
+        alert('注册成功，请登录！')
+        // 模拟人的点击行为
+        $('#link_login').click()
+      })
+    })
+
+    // 监听登录表单的提交事件
+    $('#form_login').submit(function (e) {
+      // 阻止默认提交行为
+      e.preventDefault()
+      $.ajax({
+        url: 'http://127.0.0.1:3007/api/login',
+        method: 'POST',
+        // 快速获取表单中的数据
+        data: $(this).serialize(),
+        success: function (res) {
+          if (res.status !== 0) {
+            return alert('登录失败！')
+          }
+          alert('登录成功！')
+          // 将登录成功得到的 token 字符串，保存到 localStorage 中
+          localStorage.setItem('token', res.token)
+          // 跳转到后台主页
+          location.href = 'index.html'
+        }
+      })
+    })
+  })
+</script>
+
+</html>
